@@ -36,7 +36,7 @@ public class Board {
 
     private void validateEmpty(int index) {
         Stone stone = board.get(index);
-        stone.validateRule();
+        stone.enforceImmovableStoneRule();
     }
 
     private List<Stone> changeBoard(int index, Stone newStone) {
