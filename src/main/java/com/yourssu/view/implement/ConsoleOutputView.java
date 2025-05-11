@@ -7,10 +7,6 @@ import com.yourssu.view.OutputView;
 import static com.yourssu.view.implement.GomokuUIConstants.*;
 
 public class ConsoleOutputView implements OutputView {
-    public void printInitialBoardMessage() {
-        System.out.println("\n초기 보드:");
-    }
-
     public void printTurn(int turn) {
         System.out.println("\nTurn " + turn);
     }
@@ -46,7 +42,13 @@ public class ConsoleOutputView implements OutputView {
         System.out.print(PLAYER_PROMPTS.get(currentPlayer));
     }
 
-    public void printGameOver() {
-        System.out.println("게임 종료");
+    public void printWinner(Board board, Symbol winner) {
+        System.out.println("\nResult");
+        printBoard(board);
+        System.out.printf("%s wins!\n", winner.name());
+    }
+
+    public void printGameOverMessage() {
+        System.out.println("\n게임이 종료되었습니다.");
     }
 }

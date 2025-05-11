@@ -1,7 +1,10 @@
 package com.yourssu;
 
+import com.yourssu.controller.BoardGameController;
+
 public class Application {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Runnable controller = new BoardGameController();
+        controller.run();
     }
 }
