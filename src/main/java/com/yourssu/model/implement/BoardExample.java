@@ -25,6 +25,7 @@ public class BoardExample implements Board {
         throw new IndexOutOfBoundsException();
     }
 
+    @Override
     public void placePiece(int row, int column, Piece piece) {
         if (!isValidCoordinate(row, column) || grid[row][column] != Piece.BLANK) {
             throw new IllegalArgumentException();

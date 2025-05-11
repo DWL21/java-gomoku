@@ -10,10 +10,11 @@ import static com.yourssu.view.implement.GomokuUIConstants.*;
 public class ConsoleInputView implements InputView {
     private static final Scanner scanner = new Scanner(System.in);
 
-    public String getInput() {
+    private String getInput() {
         return scanner.nextLine().trim();
     }
 
+    @Override
     public Pair<Integer, Integer> getInputForCoordinate() {
         String input = getInput();
         if (GAME_ENDED_COMMAND.equalsIgnoreCase(input)) {

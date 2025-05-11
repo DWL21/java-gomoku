@@ -7,10 +7,12 @@ import com.yourssu.view.OutputView;
 import static com.yourssu.view.implement.GomokuUIConstants.*;
 
 public class ConsoleOutputView implements OutputView {
+    @Override
     public void printTurn(int turn) {
         System.out.println("\nTurn " + turn);
     }
 
+    @Override
     public void printBoard(Board board) {
         printColumnLabels();
         printRows(board);
@@ -35,6 +37,7 @@ public class ConsoleOutputView implements OutputView {
         }
     }
 
+    @Override
     public void printCurrentPlayer(Piece currentPlayer) {
         if (!PLAYER_PROMPTS.containsKey(currentPlayer)) {
             throw new IllegalArgumentException("지원되지 않는 플레이어 타입: " + currentPlayer);
@@ -42,12 +45,14 @@ public class ConsoleOutputView implements OutputView {
         System.out.print(PLAYER_PROMPTS.get(currentPlayer));
     }
 
+    @Override
     public void printWinner(Board board, Symbol winner) {
         System.out.println("\nResult");
         printBoard(board);
         System.out.printf("%s wins!\n", winner.name());
     }
 
+    @Override
     public void printGameOverMessage() {
         System.out.println("\n게임이 종료되었습니다.");
     }
