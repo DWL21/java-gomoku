@@ -1,4 +1,4 @@
-package com.yourssu.view;
+package com.yourssu.view.implement;
 
 import com.yourssu.model.Piece;
 
