@@ -28,7 +28,7 @@ public class ConsoleInputView implements InputView {
         int col = COLUMN_LABELS.indexOf(position.toUpperCase().charAt(0));
         try {
             int row = BOARD_SIZE - Integer.parseInt(position.substring(1));
-            validatePosition(row, col);
+            validateCoordinate(row, col);
             return new Pair<>(row, col);
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException();
@@ -41,7 +41,7 @@ public class ConsoleInputView implements InputView {
         }
     }
 
-    private void validatePosition(int row, int col) {
+    private void validateCoordinate(int row, int col) {
         if (row < 0 || row >= BOARD_SIZE || col >= BOARD_SIZE) {
             throw new IllegalArgumentException();
         }
