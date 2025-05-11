@@ -29,12 +29,16 @@ public class ConsoleOutputView implements OutputView {
 
     private void printRows(Board board) {
         for (int row = 0; row < BOARD_SIZE; row++) {
-            System.out.printf("%2d ", BOARD_SIZE - row);
-            for (int column = 0; column < BOARD_SIZE; column++) {
-                System.out.print(" " + Symbol.of(board.getPiece(row, column)).getString());
-            }
-            System.out.println();
+            printRow(board, row);
         }
+    }
+
+    private static void printRow(Board board, int row) {
+        System.out.printf("%2d ", BOARD_SIZE - row);
+        for (int column = 0; column < BOARD_SIZE; column++) {
+            System.out.print(" " + Symbol.of(board.getPiece(row, column)).getString());
+        }
+        System.out.println();
     }
 
     @Override
