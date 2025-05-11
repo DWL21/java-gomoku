@@ -44,7 +44,7 @@ public class ConsoleOutputView implements OutputView {
     @Override
     public void printCurrentPlayer(Piece currentPlayer) {
         if (!PLAYER_PROMPTS.containsKey(currentPlayer)) {
-            throw new IllegalArgumentException("지원되지 않는 플레이어 타입: " + currentPlayer);
+            throw new IllegalArgumentException();
         }
         System.out.print(PLAYER_PROMPTS.get(currentPlayer));
     }
