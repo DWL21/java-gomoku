@@ -46,12 +46,11 @@ public class BoardGameControllerExample implements Runnable {
             currentPlayer = switchPlayer();
             turnCount++;
         }
-
-        if (gameOver) {
-            outputView.printGameOverMessage();
-        } else {
-            outputView.printWinner(board, Symbol.BLACK);
-        }
+//        if (gameOver) {
+//            outputView.printGameOverMessage();
+//            return;
+//        }
+        outputView.printWinner(board, Symbol.BLACK);
     }
 
     private Piece switchPlayer() {
