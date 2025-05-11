@@ -1,5 +1,6 @@
-package com.yourssu.controller;
+package com.yourssu.controller.implement;
 
+import com.yourssu.controller.Controller;
 import com.yourssu.model.Board;
 import com.yourssu.model.Piece;
 import com.yourssu.model.implement.BoardExample;
@@ -10,7 +11,7 @@ import com.yourssu.view.implement.ConsoleInputView;
 import com.yourssu.view.implement.ConsoleOutputView;
 import com.yourssu.view.implement.Symbol;
 
-public class BoardGameControllerExample implements Runnable {
+public class BoardGameControllerExample implements Controller {
     private final InputView inputView;
     private final OutputView outputView;
     private final Board board;
